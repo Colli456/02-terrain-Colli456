@@ -123,6 +123,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &64259223
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 64259224}
+  m_Layer: 0
+  m_Name: Shootpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &64259224
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64259223}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 0.83333325, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1415443539}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &128466654
 Mesh:
   m_ObjectHideFlags: 0
@@ -3178,8 +3209,10 @@ GameObject:
   - component: {fileID: 1415443537}
   - component: {fileID: 1415443536}
   - component: {fileID: 1415443535}
-  m_Layer: 0
-  m_Name: Capsule (1)
+  - component: {fileID: 1415443541}
+  - component: {fileID: 1415443540}
+  m_Layer: 6
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3297,9 +3330,38 @@ Transform:
   m_LocalPosition: {x: 74.21, y: 2.72, z: 168.36528}
   m_LocalScale: {x: 1, y: 1.2, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 64259224}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1415443540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1415443534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7ffa15c949d16c4497384968ba3d1fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 8841126430428104835, guid: 3227059fcaa7845478e6c2a78be67a76, type: 3}
+  shootPoint: {fileID: 64259223}
+--- !u!114 &1415443541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1415443534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f32634dbc394fe4a90487c493ac999f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.01
+  rotationSpeed: 0
 --- !u!1 &1449454623
 GameObject:
   m_ObjectHideFlags: 0
@@ -6943,7 +7005,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5784603670669278097, guid: 2f70be32d49671940a5aa71623a64e58, type: 3}
       propertyPath: m_Name
-      value: Capsule
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 5784603670669278097, guid: 2f70be32d49671940a5aa71623a64e58, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7349365441971705155, guid: 2f70be32d49671940a5aa71623a64e58, type: 3}
       propertyPath: m_Center.y
