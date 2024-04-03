@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Snap_Build.unity
+    guid: 826f3b3a533093041a18daf86af31153
   m_configObjects: {}
